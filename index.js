@@ -35,8 +35,10 @@ mongoose.connection.on("disconnected", () => {
 });
 
 const champion = require("./src/routes/champion");
+const cloudinary = require("./src/routes/upload");
 
 app.use("/champion", champion);
+app.use("/cloudinary", cloudinary);
 
 const port = process.env.PORT || 3000;
 
